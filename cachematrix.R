@@ -16,10 +16,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve computes the inverse of the special "matrix" returned by makeCacheMatrix. 
-## cacehSolve first compares the input with its cache, if it's the same, return the cahced result
-## If it's different, then calls solve, which solves it. 
-
+# cacheSole takes a matrix cache, and tries to get the solution, if it's already done
+# If it's not done, then solves it, and stores the solution into the object. 
 cacheSolve <- function(x, ...) {
   ##Get the solution. If solution exists, then return it. 
   s <- x$getSolved()
